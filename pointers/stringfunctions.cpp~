@@ -1,0 +1,69 @@
+
+
+void stringcopy(char* destination, char* source)
+{
+ 	while((*source) != '\0')
+  	{
+   	(*destination) = (*source);
+  	destination++;
+  	source++;  	
+	}
+	(*destination) = '\0';
+
+//return destination;
+ 	
+}
+ 
+int strlength(char* string)
+{
+ 	int k = 0;
+ 	while ((*string) != '\0')
+ 	{
+  	string++;
+  	k++;
+ 	}
+ 	return k;
+}
+
+void strcat(char* string1, char* string2)
+{
+ 	while((*string1) != '\0')
+ 	{
+  	string1++;
+ 	}
+ 	(*string1) += ' ';
+	
+		while((*string2) != '\0')
+		 {
+ 	 	(*string1) = (*string2);
+  		string1++;
+  		string2++;
+ 		}
+
+	 (*string1) = '\0';
+}
+
+bool strcompare(char* string1, char* string2, int x)
+{
+ bool equal;
+ equal = true;
+ for(int i = 0; i < x; i++)
+ {
+  if((*string1) == (*string2))
+  {
+   equal = true;
+  }
+ else if((*string1) > (*string2))
+  {
+   equal = false;
+  }
+ else if((*string1) < (*string2))
+  {
+  equal = false;
+  }
+ return equal;
+ }
+}
+
+
+     

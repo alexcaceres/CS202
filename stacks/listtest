@@ -1,0 +1,407 @@
+Script started on Wed 22 Apr 2015 08:40:40 PM PDT
+]0;acaceres@ubuntu: ~/Documents/stacksacaceres@ubuntu:~/Documents/stacks$ ./list
+
+
+Intialize list size 6
+
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 1
+
+
+****************************************
+
+Checking Empty and Full when List is Empty
+===========================================
+
+List is EMPTY
+List is NOT FULL
+
+Passed 2 out of 2 tests
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 2
+
+
+****************************************
+
+Inserts Data Items onto List
+===================================
+
+Inserting Data: 
+inserts 0 - Success
+inserts 1 - Success
+inserts 2 - Success
+inserts 3 - Success
+inserts 4 - Success
+inserts 5 - Success
+
+Checking Empty and Full: 
+Insert (overflow)
+List full. Passed.
+
+List is FULL
+List is NOT EMPTY
+Start print function:
+
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+
+End print function
+
+Passed 9 out of 9 tests
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 3
+
+
+****************************************
+
+Checking Assignment Operator
+============================
+
+Copied List: 
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+Original List: 
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+
+The two lists should match
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 4
+
+
+****************************************
+
+Clear the List
+Start print function:
+
+
+
+End print function
+
+Passed 1 out of 1 tests
+Inserting Values Until Queue is Full
+Inserting: 
+Insert 0 - Success
+
+Insert 1 - Success
+
+Insert 2 - Success
+
+Insert 3 - Success
+
+Insert 4 - Success
+
+Insert 5 - Success
+
+
+Checking full: 
+List is FULL
+
+Start print function:
+
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+
+End print function
+
+Passed 7 out of 7 tests
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 5
+
+
+****************************************
+
+Before
+Data 
+ 
+0--head--cursor 
+1 
+2 
+3 
+4 
+5
+Remove More Data Items onto List
+===============================
+
+Removing Data: 
+Remove 0 - Success
+Remove 1 - Success
+Remove 2 - Success
+List is NOT FULL
+List is NOT EMPTY
+ After 
+Data 
+ 
+3--head--cursor 
+4 
+5
+
+Passed 5 out of 5 tests
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 6
+
+
+****************************************
+
+Checking Copy Constructor
+=========================
+
+Copied List: 
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+
+Original List: 
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+
+
+The two lists should match
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 7
+
+
+****************************************
+
+The list has been cleared
+Inserting values into cleared list
+Insert 0-Success
+
+Insert 1-Success
+
+Insert 2-Success
+
+Insert 3-Success
+
+Insert 4-Success
+
+Insert 5-Success
+
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+Check go to Beginning function
+The cursor will go to the beginning
+The cursor is at the beginning value
+Data 
+ 
+0--head--cursor 
+1 
+2 
+3 
+4 
+5
+
+Check go to End function
+The cursor will go to the end
+The cursor is now at the end value
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 8
+
+
+****************************************
+
+Go to Prior check
+Current list
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+List after it has gone to previous element
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4--cursor 
+5
+
+
+Current List
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4--cursor 
+5
+Go to Next
+List after it has gone to the next element
+Data 
+ 
+0--head 
+1 
+2 
+3 
+4 
+5--cursor
+
+****************************************
+
+1. Check Empty and Full when List is Empty
+2. Inserts items onto list
+3. Check Assignment Operator
+4. Cleared and Inserts more Values in list
+5. Removes more values onto List
+6. Test Copy Constructor
+7. Check Beginning and End
+8. Check go to Prior
+9. Quit Program
+
+Please select an option: 9
+
+
+****************************************
+
+
+****************************************
+]0;acaceres@ubuntu: ~/Documents/stacksacaceres@ubuntu:~/Documents/stacks$ exit
+Script done on Wed 22 Apr 2015 08:40:53 PM PDT

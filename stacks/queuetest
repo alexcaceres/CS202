@@ -1,0 +1,284 @@
+Script started on Wed 22 Apr 2015 08:41:21 PM PDT
+]0;acaceres@ubuntu: ~/Documents/stacksacaceres@ubuntu:~/Documents/stacks$ ./queue
+
+
+Intialize queue size 10
+
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 1
+Checking if empty and full when queue is empty
+Queue is empty
+Queue is NOT FULL
+
+Passed 2 out of 2 tests
+
+****************************************
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 2
+Enqueue Multiple Data Items onto List
+===================================
+
+Enqueuing Data: 
+Enqueue 0 - Success
+Enqueue 1 - Success
+Enqueue 2 - Success
+Enqueue 3 - Success
+Enqueue 4 - Success
+Enqueue 5 - Success
+Enqueue 6 - Success
+Enqueue 7 - Success
+Enqueue 8 - Success
+Enqueue 9 - Success
+
+Enqueueing on Full: 
+Enqueue (overflow)
+Queue full. Passed.
+
+
+Checking Empty and Full: 
+QUEUE is FULL
+Queue is NOT EMPTY
+
+Enqueueing on Full: 
+Start print function:
+
+Data 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+
+
+End print function
+
+Passed 13 out of 13 tests
+
+****************************************
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 3
+Checking assignment operator
+Copied Queue: 
+Data 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+
+
+Original Queue: 
+Data 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+
+
+
+The two queues should match
+
+****************************************
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 4
+Check comparison operator
+Queues are equal
+
+Removing one data item from copy queue
+Queues are not equal
+
+Passed 2 out of 2 tests
+
+****************************************
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 5
+Clear the Queue
+Start print function:
+
+
+
+End print function
+
+Passed 1 out of 1 tests
+Enqueue Values Until Queue is Full
+Enqueuing: 
+Enqueue 0 - Success
+
+Enqueue 1 - Success
+
+Enqueue 2 - Success
+
+Enqueue 3 - Success
+
+Enqueue 4 - Success
+
+Enqueue 5 - Success
+
+Enqueue 6 - Success
+
+Enqueue 7 - Success
+
+Enqueue 8 - Success
+
+Enqueue 9 - Success
+
+
+Checking full: 
+Queue is FULL
+
+Start print function:
+
+Data 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+
+
+End print function
+
+Passed 11 out of 11 tests
+
+****************************************
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 6
+Dequeue More Data Items onto Queue
+Dequeuing Data: 
+Dequeue 0 - Success
+Dequeue 1 - Success
+Dequeue 2 - Success
+Dequeue 3 - Success
+Dequeue 4 - Success
+Queue is NOT FULL
+Queue is NOT EMPTY
+
+Passed 7 out of 7 tests
+
+****************************************
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 7
+Checking Copy Constructor
+Copied Queue: 
+Data 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+
+
+Original Queue: 
+Data 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+
+
+
+The two queues should match
+
+****************************************
+
+1. Check Empty and Full when Queue is Empty
+2. Enqueue items into queue
+3. Check Assignment Operator
+4. Check Compare Operator
+5. Clears the Queue and Checks Enqueue
+6. Check Dequeue
+7. Test Copy Constructor
+8. Quit Program
+
+Please select an option: 8
+
+****************************************
+]0;acaceres@ubuntu: ~/Documents/stacksacaceres@ubuntu:~/Documents/stacks$ exit
+Script done on Wed 22 Apr 2015 08:41:43 PM PDT

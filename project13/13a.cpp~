@@ -1,0 +1,127 @@
+#include <fstream>
+#include <iostream>
+#include "arrayl.h"
+#include "nodel.h"
+
+using namespace std;
+
+bool bubblesort(ListN &l);			// functions
+int search(int find, ListA m, int begin, int end);
+
+
+
+int main()
+{
+	int size;
+	ListN l;
+	ListA m;
+	int find;
+	int begin = 0;
+	int end = 10;
+	
+		size = 0;
+		int info;
+		ifstream fin;    // open the file
+		fin.open("file");
+
+		while(!fin.eof())
+		{
+			fin >> info;
+			l.insert(info);
+			size++;
+			if(size ==10) {
+				break;
+			}
+		}
+			fin.close();
+		
+	cout << "Unsorted list" << endl << l << endl;
+	
+	bubblesort(l);
+	cout << "Sorted List" << endl;  // The list is now sorted
+	cout << l << endl;
+	
+l.gotoBeginning();
+cout << "Copied to array-based list" << endl;
+for(int i = 0; i < 10; i++)  // converted to array based
+{
+	m.insert(l.getcursor());
+	l.gotoNext();
+}
+cout << m << endl;
+int temp;
+cout << "What number are you trying to find?" << endl;   // asks for user input
+cin >> temp;
+int index = search(temp,m,begin,end);
+if(index != -1)
+{
+cout << "Index is at " << search(temp, m, 0, 9) << endl;	// checks for the number in list
+}
+else
+{
+	cout << "The number is not in the list" << endl;
+}	
+	return 0;
+}
+
+
+
+bool bubblesort(ListN &l)  // bubble sort function
+{
+bool sorted = false;
+	while(!sorted)
+	{
+		sorted = true;
+		l.gotoBeginning();
+		int temp = l.getcursor();
+		int tempy;
+		while(l.gotoNext())
+		{
+			tempy = l.getcursor();
+			if(temp > tempy)
+			{
+			l.gotoPrior();
+			l.setcursor(tempy);
+			l.gotoNext();
+			l.setcursor(temp);
+			sorted = false;
+			}
+			else
+			{
+			temp = tempy;
+			}
+		}
+	}
+		
+}
+
+
+
+int search(int find, ListA m, int begin, int end)
+{
+
+if(begin > end)  // base case
+{
+return -1;
+}
+
+int middle = (begin+end)/2;  // pivot
+if( m.getData(middle) == find)
+	{
+	return middle;
+	}
+	if(m.getData(middle) > find)
+	{
+		return search(find,m,begin,middle-1);
+	}
+		else {
+		return search(find,m,middle+1, end);
+		}
+}
+
+
+
+
+
+				
+

@@ -1,0 +1,6 @@
+Script started on Fri 27 Mar 2015 11:26:12 AM PDT
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ make lab09
+make: `lab09' is up to date.
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ ./lab09 file
+The sun came out, and the clouds cleared up, because everything worked correctly! ]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ exit
+Script done on Fri 27 Mar 2015 11:26:26 AM PDT

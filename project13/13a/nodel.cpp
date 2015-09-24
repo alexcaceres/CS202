@@ -1,0 +1,243 @@
+#include "nodel.h"
+
+
+// node class
+
+Node:: Node (int c, Node* node)   
+{
+	data = c;
+	next = node;
+}
+
+ListN:: ListN (int a)   // constructor
+{
+	head = cursor = NULL;
+
+}
+
+ListN:: ListN (const ListN& b)  // copy constructor
+{
+	if(!b.empty())
+	{
+		Node* temp;
+		Node* tempy;
+		temp = cursor = head = new Node(b.head->data, NULL);
+		tempy = b.head->next;  
+		while(tempy != NULL)
+		{
+			temp-> next = new Node(tempy->data, NULL);
+			temp = temp-> next;
+			//tempy = tempy->next;
+		if( tempy == b.cursor)
+		{
+			cursor = temp;
+		}
+		tempy = tempy->next; // moves the tempy like the temp
+		}
+	}
+		else {
+		head = NULL;
+		cursor = NULL;
+		}
+}
+	
+
+ListN:: ~ListN()   // deconstructor
+{
+
+Node* temp;
+if(!empty())
+	{
+		cursor = temp = head;
+	}
+	
+	while(temp != NULL)
+	{
+	int a;
+	remove(a);
+	temp = head;		// moves the pointer
+	
+	}
+}
+
+bool ListN:: gotoBeginning()  // sends the cursor to the beginning
+{
+
+	if(cursor == head)
+		{
+			return false;
+		}
+	else
+	{
+		cursor = head;
+		return true;
+	}
+
+}
+
+bool ListN:: gotoEnd()  // sends the cursor to the end
+{
+	if(cursor->next != NULL)
+		{
+			cursor = cursor->next;
+		}
+	return true;
+}
+
+bool ListN:: gotoNext()   // goes to the next position
+{
+	if(!empty() && cursor->next != NULL)
+	{
+		cursor = cursor-> next;
+	}
+
+}
+
+bool ListN:: gotoPrior()
+{
+	Node* temp = head;		// moves the temp
+	while(temp->next != cursor)
+	{
+		temp = temp-> next;
+	}
+		cursor = temp;
+		return true;
+}
+
+bool ListN:: insert(int c)  // inserts 
+{
+	if(empty()) {
+	
+		Node* temp = new Node(c, NULL);
+		cursor = head = temp;
+		}
+	else
+	{
+	Node* temp = new Node(c, cursor->next);
+	cursor-> next = temp;
+	cursor = cursor ->next;
+	}
+ }
+
+bool ListN:: remove(int& c)  
+{
+	if(!empty())
+	{
+		if(head == cursor)
+		{
+			cursor = cursor->next;
+			//head->next = NULL;
+			delete head;
+			head = cursor;
+		}
+	else if( cursor-> next == NULL)
+	{
+		Node* temp = cursor;
+		gotoPrior();
+		cursor->next = NULL;
+		delete temp;
+		cursor = head;
+	}
+		else {
+			Node* temp = cursor;
+			gotoPrior();
+			cursor->next = temp->next;
+			//temp->next = NULL;
+			delete temp;
+			}
+		return true;
+	}
+	return false;
+				
+}
+bool ListN:: empty() const 
+{
+if(cursor == NULL && head == NULL)
+	{
+		return true;
+	}
+		else
+		{
+			return false;
+		}
+}
+
+bool ListN:: full() const
+{
+	return false;  // it can never be full
+}
+
+bool ListN:: clear()
+{
+	int w;
+	while(remove(w) == true)
+	{
+		remove(w);
+	}
+		return true;
+}
+
+ListN& ListN:: operator=(const ListN& list)
+{
+		if(this != &list)
+		{
+			if(!list.empty())
+				{
+				Node* temp;
+				Node* tempy;
+				temp = cursor = head = new Node(list.head->data, NULL);
+				//tempy = list.head->next;  
+		while(tempy != NULL)
+		{
+			temp-> next = new Node(tempy->data, NULL);
+			temp = temp-> next;
+				if( tempy == list.cursor)
+				{
+				cursor = temp;
+				tempy = tempy->next; // moves the tempy like the temp
+				}
+		}
+				
+			
+
+			} else {
+				head = NULL;
+				cursor = NULL;
+			}
+	return *this;
+}
+}
+
+void ListN::setcursor(int n)
+{
+
+	cursor-> data = n;
+}
+
+int ListN::getcursor() const
+{
+return cursor->data;
+}
+
+ostream& operator<<(ostream& out, const ListN& list)
+{
+	Node* temp = list.head;
+	while(temp != NULL)
+	{
+		out << temp->data;
+		
+	if( temp == list.head)
+		{
+		out << "---head ";
+		}
+	if( temp == list.cursor)
+		{
+		out << "---cursor ";
+		}
+		temp = temp ->next;
+		out << endl;
+		
+	}
+		return out;
+}
+

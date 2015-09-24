@@ -1,0 +1,4 @@
+char* stringcopy(char* destination, char* source);
+bool strcompare(char* string1, char* string2, int x);
+int strlength(char* string);
+void strcat(char* string1, char* string2);

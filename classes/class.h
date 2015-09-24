@@ -1,0 +1,53 @@
+#include <iostream>
+#include "string_library.h"
+using namespace std;
+
+#ifndef CLASS_H
+#define CLASS_H
+
+class symbol {
+
+public:
+
+symbol();
+symbol(const symbol& s);
+~symbol();
+
+char* getname(); 
+int getbonusvalue(); 
+bool getbool(); 
+
+void setname (char* reels);
+void setbonusvalue (int newvalue);
+void setbool (int check);
+
+
+
+void print ();
+
+private:
+char* name;
+int bonusvalue;
+bool exists;
+
+
+};
+
+class reel{
+
+	public:
+	reel();
+	reel(const reel& r);
+	~ reel();
+	symbol *getrow();
+	void setreel(symbol *sptr);
+	int spin();
+	void printreel();
+
+	private:
+	symbol *stop;
+	int line;
+
+};
+
+#endif

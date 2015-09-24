@@ -1,0 +1,5 @@
+testString: testString.cpp
+		g++ -c testString.cpp -o testString
+
+clean:
+		rm -rf *.o String testString

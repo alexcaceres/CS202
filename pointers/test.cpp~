@@ -1,0 +1,125 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+struct machine {
+ char name[10];
+ int bonusvalues;
+ bool exists;
+};
+
+struct reel {
+machine rows[10];
+int stop;
+
+
+};
+
+
+void readin( machine* sptr);                                  // function prototypes
+void reelfill(reel* rptr, machine* sptr);
+void strcopy (char* destination, char* source);
+//void menu( reel* rptr, machine* sptr);
+
+
+int main()
+{
+
+srand(time(NULL));     // in order to randomize my slot machine function
+
+
+
+reel slot[3];
+reel* rptr = slot;
+machine symbols[6];
+machine* sptr = symbols;
+
+
+
+readin(sptr);
+//menu(rptr, sptr);
+reelfill(rptr, sptr);
+return 0;
+
+}
+
+void readin(machine* sptr)  // reads in the symbols file 
+{
+char filename[15];
+char* fptr = filename;
+cout << "Enter filename: " << endl;
+cin >> fptr;
+ifstream fin;
+fin.open(fptr);
+
+for(int i = 0; i < 6; i++)
+{
+fin >> (*sptr).name >> (*sptr).bonusvalues;
+if((*sptr).bonusvalues != 0)
+{
+(*sptr).exists = true;
+}
+else
+{
+(*sptr).exists = false;
+}
+ cout << (*sptr).name << (*sptr).bonusvalues << endl;
+}
+
+fin.close();
+
+}
+
+void reelfill (reel* rptr, machine* sptr)
+{
+	machine * sptr2 = sptr;
+
+	machine* row_ptr = (*rptr).rows; 
+
+ 
+	for(int i = 0; i < 3; i++)        // loops through to fill the reel
+	{
+	for(int j = 0; j < 10; j++)
+	{   
+ 	int number = rand() %6;
+	int k=0;
+	while(k < number)
+	{
+	sptr2++;
+	k++;
+	}
+
+ 	strcopy((*row_ptr).name, (*sptr2).name);
+	cout << (*row_ptr).name << endl;
+ 	(*row_ptr).bonusvalues = (*sptr2).bonusvalues;
+ 	(*row_ptr).exists = (*sptr2).exists;
+	int l = 0;
+	while(l < number)
+	{
+	sptr2--;
+	l++;
+	}
+	row_ptr++;
+	}
+	rptr++;	
+      }
+	
+}
+
+void strcopy (char* destination, char* source)
+{
+while((*source) != '\0' )    
+{
+ (*destination) = (*source);  
+ //cout << destination << endl;
+ destination++;
+ source++;
+}
+
+(*destination) = '\0';   // null
+
+//cout << (*destination) << endl;
+}

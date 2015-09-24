@@ -1,0 +1,9 @@
+
+poker:	card.o 
+	g++ card.o -o all
+
+card.o:	card.cpp card.h
+	g++ -c -o card.o card.cpp
+
+clean: rm -rf *.o all
+

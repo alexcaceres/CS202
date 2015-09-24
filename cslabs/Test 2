@@ -1,0 +1,9 @@
+Script started on Fri 27 Mar 2015 11:23:52 AM PDT
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ ./lab09[K[K[K[K[K[K[Kmake lab09
+make: `lab09' is up to date.
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ ./lab09
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Invalid number of arguments!
+Aborted (core dumped)
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ exit
+Script done on Fri 27 Mar 2015 11:24:19 AM PDT

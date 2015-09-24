@@ -1,0 +1,9 @@
+Script started on Fri 27 Mar 2015 11:22:45 AM PDT
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ make lab09
+g++     lab09.cpp   -o lab09
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ ./lab09 alex
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Could not open file!
+Aborted (core dumped)
+]0;acaceres@ubuntu: ~/Documents/cslabsacaceres@ubuntu:~/Documents/cslabs$ exit
+Script done on Fri 27 Mar 2015 11:23:05 AM PDT

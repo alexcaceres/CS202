@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+class person {
+        public:
+        	char* first;
+        	char* last;
+        	int age;
+        	
+        	
+                person();
+                ~person();
+             	void setfirst(char*);
+		void setlast(char* );
+		void setssn(int*);
+		void setage(int);
+		char* getfirst() const;
+		char* getlast() const;
+		int* getssn() const;
+		int getage() const;
+		void print();
+
+        private:
+                int* ssn;
+                
+          
+};
+

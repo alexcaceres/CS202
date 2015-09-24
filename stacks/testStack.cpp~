@@ -1,0 +1,80 @@
+#include "stack.h"
+
+int main() {
+	Stack s1, s2, s3, s4;
+	s1.push('a');
+	s1.push('b');
+	s1.push('c');
+	s1.push('d');
+	s1.push('e');
+	s1.push('f');
+	s1.push('g');
+	s1.push('h');
+	s1.push('i');
+	s1.push('j');
+
+	bool push1 = s1.push('1');
+	bool push2 = s1.push('2');
+	if(!push1 && !push2) {
+		cout << "Last two elements could not be pushed." << endl;
+	}
+
+	cout << s1 << endl;
+	cout << "\nBegin pops..." << endl;
+	char p[10];
+	bool pop = false;
+	for(int i = 0; i < 3; i++) {
+		pop = s1.pop(p[i]);
+		if(pop) {
+			cout << "Pop successful: " << p[i] << endl;
+		} else {
+			cout << "Pop unsuccessful" << endl;
+		}
+	}
+	cout << "Remaining:\n" << s1 << "\n\n" << endl;
+
+	cout << "Adding items..." << endl;
+	s1.push('a');
+	s1.push('b');
+	s1.push('c');
+	cout << "New: " << endl;
+	cout << s1 << endl;
+
+	s2.push('a');
+	s2.push('b');
+	s2.push('c');
+	s2.push('d');
+	s2.push('e');
+	s2.push('f');
+	s2.push('g');
+	s2.push('h');
+	s2.push('i');
+	s2.push('j');
+
+	s3.push('a');
+	s3.push('b');
+	s3.push('c');
+	s3.push('d');
+	s3.push('e');
+	s3.push('f');
+	s3.push('g');
+	s3.push('h');
+	s3.push('i');
+	s3.push('i');
+
+	s4.push('a');
+	s4.push('b');
+	s4.push('c');
+	s4.push('d');
+	s4.push('e');
+	s4.push('f');
+	s4.push('g');
+	s4.push('h');
+	s4.push('i');
+	s4.push('j');
+
+	cout << "s1 vs. s2 (!same): " << (s1 == s2) << endl;
+	cout << "s4 vs. s3 (!same): " << (s4==s3) << endl;
+	cout << "s4 vs. s2 (same): " << (s4==s2) << endl;
+	return 0;
+}
